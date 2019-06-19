@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Ryan Powell</title>
+</head>
+<body>
+    <div class="grid">
+        <section class="hero">
+            <h1 class="remove-name">Ryan <span>Powell</span></h1>
+            <img src="img/picture.jpg" alt="Ryan Powell" class="hero-pic">
+            <h1 id="move-name">Ryan <span>Powell</span></h1>
+            <p>Aspiring front end web developer</p>
+            <div class="social">
+                <a  href="mailto:ryanjamespowell13@gmail.    com" >
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/   ryan-powell" target="blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://codepen.io/    ryanpowell/" target="blank">
+                    <i class="fa fa-codepen"></i>
+                </a>
+                <a href="https://github.com/    RyanPowell13" target="blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+        </section>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I grew up around computers and technology, and devloped a fascination and interest in tech at a young age. I'm currently studying Computer Science at Nashville State Community College, and plan to finish my bachelor's degree at Middle Tennessee State University.</p>
+            <br>
+            <p>My other interests include playing and writing music, graphic design, and hanging out with my cat.</p>
+        </section>
+        <section class="goals">
+            <h2>Goals</h2>
+            <p>I hope to further evolve my skills as a web devloper, and increase my knowledge in HTML, CSS, JavaScript, React, and Python.</p>
+            <br>
+            <div class="icons">
+                <img src="img/html5-brands.svg" alt="">
+                <img src="img/css3-alt-brands.svg" alt="">
+                <img src="img/js-brands.svg" alt="">
+                <img src="img/react-brands.svg" alt="">
+                <img src="img/python-brands.svg" alt="">
+            </div>
+            <br>
+            <p>I'm excited to use my experiences and creativity gained from my my musical and artistic background to the process of building websites.</p>
+        </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <input type="text" name="name" placeholder="Name" id="name">
+            <textarea name="message" class="message" cols="30" rows="10" placeholder="Message"></textarea>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <script>
+
+    var tl = new TimelineMax();
+    
+    tl.staggerFrom('section', 2, {
+        opacity: 0,
+        scale: .5,
+        ease: Power2.easeOut
+    }, 0.2)
+
+    tl.staggerFrom('h1, h2', .5, {
+        opacity: 0,
+        y: -40,
+        ease: Power2.easeInOut
+    }, 0.2, "-=2")
+
+    tl.staggerFrom('a', .5, {
+        opacity: 0,
+        y: -40,
+        ease: Power2.easeInOut
+    }, 0.2, "-=2")
+
+        
+
+
+    </script>
+</body>
+</html>

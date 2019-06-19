@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+* {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  grid-gap: 10px;
+}
+
+.grid section {
+  padding: 3em;
+}
+
+.grid section h1, .grid section h2 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.grid section h2 {
+  font-size: 1.4rem;
+}
+
+.grid section.hero {
+  padding-top: 6em;
+  background: #FF5B5B;
+}
+
+.grid section.hero h1 {
+  text-align: center;
+  margin-bottom: 1.4em;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.grid section.hero h1 span {
+  color: #FFD3D3;
+}
+
+.grid section.hero #move-name {
+  display: none;
+}
+
+.grid section.hero img {
+  height: auto;
+  width: 90%;
+  border-radius: 50%;
+  border: 5px white solid;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.grid section.hero p {
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 1.3em;
+  padding-top: 2em;
+}
+
+.grid section.hero .social {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.grid section.hero a {
+  text-decoration: none;
+  color: white;
+  margin: 2em;
+}
+
+.grid section.hero a i {
+  font-size: 1.7em;
+}
+
+.grid section.about {
+  background: #FF9D9D;
+}
+
+.grid section.about h2 {
+  text-align: left;
+  margin-bottom: 1.3em;
+}
+
+.grid section.about p {
+  text-align: left;
+}
+
+.grid section.goals {
+  background: #FFD3D3;
+}
+
+.grid section.goals h2 {
+  text-align: left;
+  margin-bottom: 1.3em;
+}
+
+.grid section.goals .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.grid section.goals .icons img {
+  width: 50px;
+}
+
+.grid section.contact {
+  background: #FFEDED;
+}
+
+.grid section.contact h2 {
+  text-align: left;
+  margin-bottom: 1.3em;
+}
+
+.grid section.contact input {
+  width: 100%;
+  height: 25px;
+  font-family: 'Montserrat', sans-serif;
+  background: #f4f4f4;
+  border: 1px black solid;
+  border-radius: 3px;
+  margin-bottom: 2em;
+}
+
+.grid section.contact #name {
+  padding: 0.5em 0em 0.5em 1.5em;
+}
+
+.grid section.contact textarea {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background: #f4f4f4;
+  border: 1px black solid;
+  border-radius: 3px;
+  padding: 1em 0em 1em 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .grid {
+    -ms-grid-columns: 60% auto;
+        grid-template-columns: 60% auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "hero about" "hero goals" "hero contact";
+    height: 100vh;
+  }
+  section.hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    grid-area: hero;
+    font-size: 16px;
+  }
+  section.about {
+    padding: 1em;
+    font-size: 16px;
+  }
+  section.goals {
+    padding: 1em;
+    font-size: 16px;
+  }
+  section.contact {
+    padding: 1em;
+    font-size: 16px;
+  }
+  textarea {
+    height: 75px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  section.hero {
+    margin: 0;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% auto;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "picture words";
+  }
+  section.hero .remove-name {
+    display: none !important;
+  }
+  section.hero #move-name {
+    display: block !important;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: words;
+    height: 50px;
+    margin-top: 6.3em;
+    margin-right: auto;
+  }
+  section.hero img.hero-pic {
+    width: 75%;
+    margin: auto 0 auto 3em;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: picture;
+  }
+  section.hero p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: words;
+    margin: 0;
+    height: 50px;
+    margin-top: 22em;
+    margin-right: auto;
+  }
+  section.hero .social {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: words;
+    margin-top: 35em !important;
+    margin-right: auto;
+    height: 50px;
+  }
+  section.about {
+    font-size: 18px;
+  }
+  section.goals {
+    font-size: 18px;
+  }
+  section.contact {
+    font-size: 18px;
+  }
+  section.contact input {
+    width: 50% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.contact #name {
+    padding: 1em 0 1em 2em;
+  }
+  section.contact textarea {
+    width: 75% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
