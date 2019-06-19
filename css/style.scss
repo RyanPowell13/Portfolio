@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+
+    section {
+        padding: 3em;
+
+        h1, h2 {
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+    }
+
+    section.hero {
+        padding-top: 6em;
+        background: #FF5B5B;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.4em;
+            font-weight: 700;
+            font-size: 3em;
+            
+            span {
+                color: #FFD3D3
+            }
+
+        }
+
+        #move-name {
+            display: none;
+        }
+
+        img {
+            height: auto;
+            width: 90%;
+            border-radius: 50%;
+            border: 5px white solid;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        p {
+            text-align: center;
+            text-transform: lowercase;
+            font-size: 1.3em;
+            padding-top: 2em;
+        }
+
+        .social{
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 2em; 
+            
+            i {
+                font-size: 1.7em;
+            }
+        }
+
+    }
+
+    section.about {
+        background: #FF9D9D;
+
+        h2 {
+            text-align: left;
+            margin-bottom: 1.3em;
+        }
+
+        p {
+            text-align: left;
+        }
+
+    }
+
+    section.goals {
+        background: #FFD3D3;
+
+        h2 {
+            text-align: left;
+            margin-bottom: 1.3em;
+        }
+
+        .icons{
+            display: flex;
+            height: 50px;
+            justify-content: space-between;
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    section.contact {
+        background: #FFEDED;
+
+        h2 {
+            text-align: left;
+            margin-bottom: 1.3em; 
+        }
+
+        input {
+            width: 100%;
+            height: 25px;
+            font-family: 'Montserrat', sans-serif;
+            background: #f4f4f4;
+            border: 1px black solid;
+            border-radius: 3px;
+            margin-bottom: 2em;  
+        }
+
+        #name {
+            padding: 0.5em 0em 0.5em 1.5em;
+        }
+
+        textarea {
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background: #f4f4f4;
+            border: 1px black solid;
+            border-radius: 3px;
+            padding: 1em 0em 1em 1em;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    .grid {
+        grid-template-columns: 60% auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "hero about"
+            "hero goals"
+            "hero contact";
+        height: 100vh;
+    }
+
+    section.hero {
+        grid-area: hero;
+        font-size: 16px;
+    }
+
+    section.about {
+        padding: 1em;
+        font-size: 16px;
+    }
+    
+    section.goals {
+        padding: 1em;
+        font-size: 16px;
+    }
+
+    section.contact {
+        padding: 1em;
+        font-size: 16px;
+    }
+
+    textarea {
+        height: 75px;
+    }
+
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+
+    section.hero {
+        margin: 0;
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: 
+            "picture words";
+        
+        .remove-name {
+            display: none !important;
+        }
+
+        #move-name {
+            display: block !important;
+            grid-area: words;
+            height: 50px;
+            margin-top: 6.3em;
+            margin-right: auto;
+        }
+
+
+        img.hero-pic {
+            width: 75%;
+            margin: auto 0 auto 3em;
+            grid-area: picture;
+        }
+
+        p {
+            grid-area: words;
+            margin: 0;
+            height: 50px;
+            margin-top: 22em;
+            margin-right: auto;
+        }
+
+        .social {
+            grid-area: words;
+            margin-top: 35em !important;
+            margin-right: auto;
+            height: 50px;
+        }
+    }
+
+    section.about {
+        font-size: 18px;
+    }
+
+    section.goals {
+        font-size: 18px;
+    }
+
+    section.contact {
+        font-size: 18px;
+
+        input {
+            width: 50% !important;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #name {
+            padding: 1em 0 1em 2em;
+        }
+
+        textarea {
+            width: 75% !important;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
